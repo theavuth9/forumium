@@ -42,6 +42,12 @@ class TagResource extends Resource
                     ->required()
                     ->maxLength(255),
 
+                Forms\Components\TextInput::make('slug')
+                    ->label('Slug')
+                    ->unique(ignoreRecord: true)
+                    ->required()
+                    ->maxLength(255),
+
                 Forms\Components\ColorPicker::make('color')
                     ->label('Color')
                     ->required(),
