@@ -3,7 +3,7 @@
     $routeParams = [];
     if ($routePrefix == 'user') {
         $routeParams['user'] = $user;
-        $routeParams['slug'] = Str::slug($user->name);
+        $routeParams['slug'] = $user->slug;
     }
 @endphp
 <div class="w-full flex lg:flex-col flex-row lg:overflow-hidden overflow-auto lg:text-base text-xs">
